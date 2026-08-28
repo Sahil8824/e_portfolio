@@ -24,10 +24,7 @@ export default function Projects() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, i) => (
               <Reveal key={project.id} delay={i * 0.08}>
-                <ProjectCard
-                  project={project}
-                  onOpen={setActive}
-                />
+                <ProjectCard project={project} onOpen={setActive} />
               </Reveal>
             ))}
           </div>
@@ -37,11 +34,9 @@ export default function Projects() {
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-accent/10 text-accent">
                 <FolderGit2 size={24} />
               </div>
-
               <p className="mt-5 font-mono text-sm text-ink2">
-                Projects list is currently empty.
+                // projects.length === 0
               </p>
-
               <p className="mt-2 max-w-sm text-ink2">
                 Projects are currently being developed and will be added here
                 soon.
@@ -51,10 +46,7 @@ export default function Projects() {
         )}
       </div>
 
-      <ProjectModal
-        project={active}
-        onClose={() => setActive(null)}
-      />
+      <ProjectModal project={active} onClose={() => setActive(null)} />
     </section>
   );
 }

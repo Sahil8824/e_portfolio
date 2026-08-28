@@ -11,19 +11,12 @@ export default function SectionHeading({
 }) {
   return (
     <Reveal className="max-w-2xl">
-      <p className="mb-3 font-mono text-sm text-accent">
-        {"// "}
-        {eyebrow}
-      </p>
-
-      <h2 className="text-3xl font-semibold tracking-tight text-ink dark:text-paper sm:text-4xl">
+      <p className="font-mono text-sm text-accent mb-3">// {eyebrow}</p>
+      <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-ink dark:text-paper">
         {title}
       </h2>
-
       {description && (
-        <p className="mt-4 leading-relaxed text-ink2">
-          {description}
-        </p>
+        <p className="mt-4 text-ink2 leading-relaxed">{description}</p>
       )}
     </Reveal>
   );
